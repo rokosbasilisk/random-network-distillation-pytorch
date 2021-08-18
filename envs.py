@@ -50,9 +50,9 @@ class AtariEnvironment(Environment):
             is_render,
             env_idx,
             child_conn,
-            history_size=4,
-            h=370,
-            w=790,
+            history_size=1,
+            h=790,
+            w=370,
             life_done=True,
             sticky_action=True,
             p=0.25):
@@ -112,7 +112,7 @@ class AtariEnvironment(Environment):
                     info.get('episode', {}).get('visited_rooms', {})))
                 self.history = self.reset()
 
-            self.child_conn.send([self.history[:, :, :], reward, force_done, done, log_reward])
+            self.child_conn.send([self.history, reward, force_done, done, log_reward])
 
     def reset(self):
         self.last_action = 0
@@ -121,7 +121,7 @@ class AtariEnvironment(Environment):
         self.rall = 0
         s = self.env.reset()
         self.get_init_state(s)
-        return self.history[:, :, :]
+        return self.history
 
     def pre_proc(self, frame):
         if type(frame) == type(dict()):
@@ -137,8 +137,10 @@ class AtariEnvironment(Environment):
         img = Image.new(mode='RGB',size=(790,370))
         text = ImageDraw.Draw(img)
         text.text((0, 0),frame, fill=(255,255,255))
-        return np.array(img.convert('L'))
+        return np.array(img.convert('L')).reshape(1,790,370)
 
     def get_init_state(self, s):
         for i in range(self.history_size):
-            self.history[i, :, :] = self.pre_proc(s)
+            #print(self.history.shape)
+            #print(self.pre_proc(s).shape)
+            self.history[i,:,:] = self.pre_proc(s)
