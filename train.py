@@ -15,12 +15,7 @@ def main():
     env_id = default_config['EnvID']
     env_type = default_config['EnvType']
 
-    if env_type == 'mario':
-        env = BinarySpaceToDiscreteSpaceEnv(gym_super_mario_bros.make(env_id), COMPLEX_MOVEMENT)
-    elif env_type == 'atari':
-        env = gym.make(env_id)
-    else:
-        raise NotImplementedError
+    env = gym.make(env_id)
     input_size = env.observation_space.shape  # 4
     output_size = env.action_space.n  # 2
 
@@ -29,7 +24,7 @@ def main():
 
     env.close()
 
-    is_load_model = True
+    is_load_model = False
     is_render = False
     model_path = 'models/{}.model'.format(env_id)
     predictor_path = 'models/{}.pred'.format(env_id)
