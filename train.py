@@ -16,15 +16,15 @@ def main():
     env_type = default_config['EnvType']
 
     env = gym.make(env_id)
-    input_size = env.observation_space.shape  # 4
+    #input_size = env.observation_space.shape  # 4
+    input_size = 4
     output_size = env.action_space.n  # 2
 
-    if 'Breakout' in env_id:
-        output_size -= 1
+    print("input and output sizes are %s %s"%(input_size,output_size))
 
     env.close()
 
-    is_load_model = False
+    is_load_model = True
     is_render = False
     model_path = 'models/{}.model'.format(env_id)
     predictor_path = 'models/{}.pred'.format(env_id)
@@ -66,10 +66,6 @@ def main():
 
     if default_config['EnvType'] == 'atari':
         env_type = AtariEnvironment
-    elif default_config['EnvType'] == 'mario':
-        env_type = MarioEnvironment
-    else:
-        raise NotImplementedError
 
     agent = agent(
         input_size,
@@ -106,8 +102,7 @@ def main():
     child_conns = []
     for idx in range(num_worker):
         parent_conn, child_conn = Pipe()
-        work = env_type(env_id, is_render, idx, child_conn, sticky_action=sticky_action, p=action_prob,
-                        life_done=life_done)
+        work = env_type(env_id, is_render, idx, child_conn, history_size = 4,sticky_action=sticky_action, p=action_prob,life_done=life_done)
         work.start()
         works.append(work)
         parent_conns.append(parent_conn)
@@ -134,7 +129,7 @@ def main():
 
         for parent_conn in parent_conns:
             s, r, d, rd, lr = parent_conn.recv()
-            next_obs.append(s.reshape([1,790,370]))
+            next_obs.append(s[3,:,:].reshape([1,790,370]))
 
         if len(next_obs) % (num_step * num_worker) == 0:
             next_obs = np.stack(next_obs)
@@ -163,17 +158,18 @@ def main():
                 dones.append(d)
                 real_dones.append(rd)
                 log_rewards.append(lr)
-                next_obs.append(s.reshape([1,790,370]))
+                next_obs.append(s[3,:,:].reshape([1,790,370]))
 
             next_states = np.stack(next_states)
             rewards = np.hstack(rewards)
+            print("asdfgasfgsdfg"+str(rewards.shape))
             dones = np.hstack(dones)
             real_dones = np.hstack(real_dones)
             next_obs = np.stack(next_obs)
 
             # total reward = int reward + ext Reward
-            intrinsic_reward = agent.compute_intrinsic_reward(
-                ((next_obs - obs_rms.mean) / np.sqrt(obs_rms.var)).clip(-5, 5))
+            intrinsic_reward = agent.compute_intrinsic_reward(((next_obs - obs_rms.mean) / np.sqrt(obs_rms.var)).clip(-5, 5))
+            print("intrinsic_reward"+str(intrinsic_reward.shape))
             intrinsic_reward = np.hstack(intrinsic_reward)
             sample_i_rall += intrinsic_reward[sample_env_idx]
 
@@ -203,6 +199,7 @@ def main():
                 sample_i_rall = 0
 
         # calculate last next value
+        print("second time")
         _, value_ext, value_int, _ = agent.get_action(np.float32(states) / 255.)
         total_ext_values.append(value_ext)
         total_int_values.append(value_int)
@@ -220,13 +217,15 @@ def main():
         # Step 2. calculate intrinsic reward
         # running mean intrinsic reward
         total_int_reward = np.stack(total_int_reward).transpose()
-        total_reward_per_env = np.array([discounted_reward.update(reward_per_step) for reward_per_step in
-                                         total_int_reward.T])
+        print("total int rew"+str(total_int_reward.shape))
+        total_reward_per_env = np.array([discounted_reward.update(reward_per_step) for reward_per_step in total_int_reward.T])
         mean, std, count = np.mean(total_reward_per_env), np.std(total_reward_per_env), len(total_reward_per_env)
         reward_rms.update_from_moments(mean, std ** 2, count)
 
         # normalize intrinsic reward
+        print("reward_rms"+str(reward_rms.var.shape))
         total_int_reward /= np.sqrt(reward_rms.var)
+        print("totlintrew"+str(total_int_reward.shape))
         writer.add_scalar('data/int_reward_per_epi', np.sum(total_int_reward) / num_worker, sample_episode)
         writer.add_scalar('data/int_reward_per_rollout', np.sum(total_int_reward) / num_worker, global_update)
         # -------------------------------------------------------------------------------------------
@@ -245,6 +244,7 @@ def main():
 
         # intrinsic reward calculate
         # None Episodic
+        print("making intrinsic reward")
         int_target, int_adv = make_train_data(total_int_reward,
                                               np.zeros_like(total_int_reward),
                                               total_int_values,
@@ -265,7 +265,7 @@ def main():
                           total_adv, ((total_next_obs - obs_rms.mean) / np.sqrt(obs_rms.var)).clip(-5, 5),
                           total_policy)
 
-        if global_step % (num_worker * num_step * 100) == 0:
+        if global_step % (num_worker * num_step * 50) == 0:
             print('Now Global Step :{}'.format(global_step))
             torch.save(agent.model.state_dict(), model_path)
             torch.save(agent.rnd.predictor.state_dict(), predictor_path)

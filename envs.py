@@ -1,6 +1,6 @@
 import gym
 import cv2
-
+import random 
 import numpy as np
 
 from abc import abstractmethod
@@ -42,6 +42,53 @@ class Environment(Process):
     @abstractmethod
     def get_init_state(self, x):
         pass
+def unwrap(env):
+    if hasattr(env, "unwrapped"):
+        return env.unwrapped
+    elif hasattr(env, "env"):
+        return unwrap(env.env)
+    elif hasattr(env, "leg_env"):
+        return unwrap(env.leg_env)
+    else:
+        return env
+
+
+class MaxAndSkipEnv(gym.Wrapper):
+    def __init__(self, env, is_render, skip=4):
+        """Return only every `skip`-th frame"""
+        gym.Wrapper.__init__(self, env)
+        # most recent raw observations (for max pooling across time steps)
+        #self._obs_buffer = np.zeros((2,) + env.observation_space.shape, dtype=np.uint8) 
+        # store dictionaries in observation buffer 
+        self._obs_buffer = np.array([{},{},{},{}])
+        self._skip = skip
+        self.is_render = is_render
+
+    def step(self, action):
+        """Repeat action, sum reward, and max over last observations."""
+        total_reward = 0.0
+        done = None
+        for i in range(self._skip):
+            obs, reward, done, info = self.env.step(action)
+            if self.is_render:
+                self.env.render()
+            #if i == self._skip - 2:
+            #    self._obs_buffer[0] = obs
+            #if i == self._skip - 1:
+            #    self._obs_buffer[1] = obs
+            self._obs_buffer[i] = obs
+            total_reward += reward
+            if done:
+                break
+
+        # Note that the observation on the done=True frame
+        # doesn't matter
+        max_frame = self._obs_buffer[random.randint(0,3)]
+        return max_frame, total_reward, done, info
+
+    def reset(self, **kwargs):
+        return self.env.reset(**kwargs)
+
 
 class AtariEnvironment(Environment):
     def __init__(
@@ -50,7 +97,7 @@ class AtariEnvironment(Environment):
             is_render,
             env_idx,
             child_conn,
-            history_size=1,
+            history_size=4,
             h=790,
             w=370,
             life_done=True,
@@ -58,7 +105,7 @@ class AtariEnvironment(Environment):
             p=0.25):
         super(AtariEnvironment, self).__init__()
         self.daemon = True
-        self.env = gym.make(env_id)
+        self.env = MaxAndSkipEnv(gym.make(env_id), is_render)
         self.env_id = env_id
         self.is_render = is_render
         self.env_idx = env_idx
@@ -98,9 +145,8 @@ class AtariEnvironment(Environment):
             log_reward = reward
             force_done = done
 
-
-            #self.history[:3, :, :] = self.history[1:, :, :]
-            self.history = self.pre_proc(s)
+            self.history[:3, :, :] = self.history[1:, :, :]
+            self.history[3, :, :] = self.pre_proc(s)
 
             self.rall += reward
             self.steps += 1
@@ -111,8 +157,7 @@ class AtariEnvironment(Environment):
                     self.episode, self.env_idx, self.steps, self.rall, np.mean(self.recent_rlist),
                     info.get('episode', {}).get('visited_rooms', {})))
                 self.history = self.reset()
-
-            self.child_conn.send([self.history, reward, force_done, done, log_reward])
+            self.child_conn.send([self.history[:, :, :], reward, force_done, done, log_reward])
 
     def reset(self):
         self.last_action = 0
@@ -121,7 +166,7 @@ class AtariEnvironment(Environment):
         self.rall = 0
         s = self.env.reset()
         self.get_init_state(s)
-        return self.history
+        return self.history[:, :, :]
 
     def pre_proc(self, frame):
         if type(frame) == type(dict()):

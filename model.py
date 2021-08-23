@@ -97,12 +97,42 @@ class CnnActorCriticNetwork(nn.Module):
             nn.Conv2d(
                 in_channels=64,
                 out_channels=64,
-                kernel_size=3,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=64,
+                out_channels=64,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=64,
+                out_channels=64,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+                nn.Conv2d(
+                in_channels=64,
+                out_channels=64,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=64,
+                out_channels=64,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=64,
+                out_channels=64,
+                kernel_size=4,
                 stride=1),
             nn.ReLU(),
             Flatten(),
             linear(
-                7 * 7 * 64,
+                131456,
                 256),
             nn.ReLU(),
             linear(
@@ -165,57 +195,115 @@ class RNDModel(nn.Module):
         self.input_size = input_size
         self.output_size = output_size
 
-        feature_output = 7 * 7 * 64
-        self.predictor = nn.Sequential(
+        feature_output = 174080
+        self.predictor =nn.Sequential(            
             nn.Conv2d(
                 in_channels=1,
                 out_channels=32,
                 kernel_size=8,
                 stride=4),
-            nn.LeakyReLU(),
+            nn.ReLU(),
             nn.Conv2d(
                 in_channels=32,
-                out_channels=64,
+                out_channels=32,
                 kernel_size=4,
                 stride=2),
-            nn.LeakyReLU(),
+            nn.ReLU(),
             nn.Conv2d(
-                in_channels=64,
-                out_channels=64,
-                kernel_size=3,
+                in_channels=32,
+                out_channels=32,
+                kernel_size=4,
                 stride=1),
-            nn.LeakyReLU(),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=32,
+                out_channels=32,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=32,
+                out_channels=32,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=32,
+                out_channels=32,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=32,
+                out_channels=32,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=32,
+                out_channels=32,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
             Flatten(),
-            nn.Linear(feature_output, 512),
-            nn.ReLU(),
-            nn.Linear(512, 512),
-            nn.ReLU(),
-            nn.Linear(512, 512)
+            nn.Linear(65728,256),
+        nn.ReLU(),
+        nn.Linear(256,1)
         )
-
         self.target = nn.Sequential(
             nn.Conv2d(
                 in_channels=1,
                 out_channels=32,
                 kernel_size=8,
                 stride=4),
-            nn.LeakyReLU(),
+            nn.ReLU(),
             nn.Conv2d(
                 in_channels=32,
-                out_channels=64,
+                out_channels=32,
                 kernel_size=4,
                 stride=2),
-            nn.LeakyReLU(),
+            nn.ReLU(),
             nn.Conv2d(
-                in_channels=64,
-                out_channels=64,
-                kernel_size=3,
+                in_channels=32,
+                out_channels=32,
+                kernel_size=4,
                 stride=1),
-            nn.LeakyReLU(),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=32,
+                out_channels=32,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=32,
+                out_channels=32,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=32,
+                out_channels=32,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=32,
+                out_channels=32,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
+            nn.Conv2d(
+                in_channels=32,
+                out_channels=32,
+                kernel_size=4,
+                stride=1),
+            nn.ReLU(),
             Flatten(),
-            nn.Linear(feature_output, 512)
+            nn.Linear(65728,256),
+        nn.ReLU(),
+        nn.Linear(256,1)
         )
-
         for p in self.modules():
             if isinstance(p, nn.Conv2d):
                 init.orthogonal_(p.weight, np.sqrt(2))
@@ -231,5 +319,5 @@ class RNDModel(nn.Module):
     def forward(self, next_obs):
         target_feature = self.target(next_obs)
         predict_feature = self.predictor(next_obs)
-
+        print(str(target_feature.shape)+("target feature shape"))
         return predict_feature, target_feature

@@ -30,7 +30,7 @@ class RNDAgent(object):
             use_gae=True,
             use_cuda=False,
             use_noisy_net=False):
-        self.model = CnnActorCriticNetwork(input_size, output_size, use_noisy_net)
+        self.model = nn.DataParallel(CnnActorCriticNetwork(input_size, output_size, use_noisy_net))
         self.num_env = num_env
         self.output_size = output_size
         self.input_size = input_size
@@ -44,7 +44,7 @@ class RNDAgent(object):
         self.ppo_eps = ppo_eps
         self.clip_grad_norm = clip_grad_norm
         self.update_proportion = update_proportion
-        self.device = torch.device('cuda' if use_cuda else 'cpu')
+        self.device = torch.device("cuda" if use_cuda else 'cpu')
 
         self.rnd = RNDModel(input_size, output_size)
         self.optimizer = optim.Adam(list(self.model.parameters()) + list(self.rnd.predictor.parameters()),
@@ -54,6 +54,7 @@ class RNDAgent(object):
         self.model = self.model.to(self.device)
 
     def get_action(self, state):
+        print(state.shape)
         state = torch.Tensor(state).to(self.device)
         state = state.float()
         policy, value_ext, value_int = self.model(state)
@@ -70,11 +71,12 @@ class RNDAgent(object):
 
     def compute_intrinsic_reward(self, next_obs):
         next_obs = torch.FloatTensor(next_obs).to(self.device)
-
+        print("next obs"+str(next_obs.shape))
         target_next_feature = self.rnd.target(next_obs)
         predict_next_feature = self.rnd.predictor(next_obs)
+        print("target shapezzzzz"+str(target_next_feature.shape))
+        print("predict shapezzzzz"+str(predict_next_feature.shape))
         intrinsic_reward = (target_next_feature - predict_next_feature).pow(2).sum(1) / 2
-
         return intrinsic_reward.data.cpu().numpy()
 
     def train_model(self, s_batch, target_ext_batch, target_int_batch, y_batch, adv_batch, next_obs_batch, old_policy):
