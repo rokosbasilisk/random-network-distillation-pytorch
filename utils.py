@@ -15,10 +15,7 @@ train_method = default_config['TrainMethod']
 
 
 def make_train_data(reward, done, value, gamma, num_step, num_worker):
-    print("reward shape "+str(reward.shape))
-    print("value shape"+str(value.shape))
     discounted_return = np.empty([num_worker, num_step])
-    print("discounted return shape"+str(discounted_return.shape))
 
     # Discounted Return
     if use_gae:
@@ -27,12 +24,8 @@ def make_train_data(reward, done, value, gamma, num_step, num_worker):
             delta = reward[:, t] + gamma * value[:, t + 1] * (1 - done[:, t]) - value[:, t]
             gae = delta + gamma * lam * (1 - done[:, t]) * gae
 
-            print(str(gae.shape)+"gaeshape")
-            print(str(value[:,t].shape)+"valueshape")
             discounted_return[:, t] = gae + value[:, t]
             # For Actor
-        print(str(discounted_return.shape)+"discounted return")
-        print(str(value.shape)+"value shape")
         adv = discounted_return - value[:, :-1]
 
     else:

@@ -54,7 +54,6 @@ class RNDAgent(object):
         self.model = self.model.to(self.device)
 
     def get_action(self, state):
-        print(state.shape)
         state = torch.Tensor(state).to(self.device)
         state = state.float()
         policy, value_ext, value_int = self.model(state)
@@ -71,11 +70,8 @@ class RNDAgent(object):
 
     def compute_intrinsic_reward(self, next_obs):
         next_obs = torch.FloatTensor(next_obs).to(self.device)
-        print("next obs"+str(next_obs.shape))
         target_next_feature = self.rnd.target(next_obs)
         predict_next_feature = self.rnd.predictor(next_obs)
-        print("target shapezzzzz"+str(target_next_feature.shape))
-        print("predict shapezzzzz"+str(predict_next_feature.shape))
         intrinsic_reward = (target_next_feature - predict_next_feature).pow(2).sum(1) / 2
         return intrinsic_reward.data.cpu().numpy()
 

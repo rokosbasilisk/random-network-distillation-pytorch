@@ -19,12 +19,11 @@ def main():
     #input_size = env.observation_space.shape  # 4
     input_size = 4
     output_size = env.action_space.n  # 2
-
     print("input and output sizes are %s %s"%(input_size,output_size))
 
     env.close()
 
-    is_load_model = True
+    is_load_model = False
     is_render = False
     model_path = 'models/{}.model'.format(env_id)
     predictor_path = 'models/{}.pred'.format(env_id)
@@ -162,14 +161,12 @@ def main():
 
             next_states = np.stack(next_states)
             rewards = np.hstack(rewards)
-            print("asdfgasfgsdfg"+str(rewards.shape))
             dones = np.hstack(dones)
             real_dones = np.hstack(real_dones)
             next_obs = np.stack(next_obs)
 
             # total reward = int reward + ext Reward
             intrinsic_reward = agent.compute_intrinsic_reward(((next_obs - obs_rms.mean) / np.sqrt(obs_rms.var)).clip(-5, 5))
-            print("intrinsic_reward"+str(intrinsic_reward.shape))
             intrinsic_reward = np.hstack(intrinsic_reward)
             sample_i_rall += intrinsic_reward[sample_env_idx]
 
@@ -199,7 +196,6 @@ def main():
                 sample_i_rall = 0
 
         # calculate last next value
-        print("second time")
         _, value_ext, value_int, _ = agent.get_action(np.float32(states) / 255.)
         total_ext_values.append(value_ext)
         total_int_values.append(value_int)
@@ -217,15 +213,12 @@ def main():
         # Step 2. calculate intrinsic reward
         # running mean intrinsic reward
         total_int_reward = np.stack(total_int_reward).transpose()
-        print("total int rew"+str(total_int_reward.shape))
         total_reward_per_env = np.array([discounted_reward.update(reward_per_step) for reward_per_step in total_int_reward.T])
         mean, std, count = np.mean(total_reward_per_env), np.std(total_reward_per_env), len(total_reward_per_env)
         reward_rms.update_from_moments(mean, std ** 2, count)
 
         # normalize intrinsic reward
-        print("reward_rms"+str(reward_rms.var.shape))
         total_int_reward /= np.sqrt(reward_rms.var)
-        print("totlintrew"+str(total_int_reward.shape))
         writer.add_scalar('data/int_reward_per_epi', np.sum(total_int_reward) / num_worker, sample_episode)
         writer.add_scalar('data/int_reward_per_rollout', np.sum(total_int_reward) / num_worker, global_update)
         # -------------------------------------------------------------------------------------------
@@ -244,7 +237,6 @@ def main():
 
         # intrinsic reward calculate
         # None Episodic
-        print("making intrinsic reward")
         int_target, int_adv = make_train_data(total_int_reward,
                                               np.zeros_like(total_int_reward),
                                               total_int_values,
@@ -265,7 +257,7 @@ def main():
                           total_adv, ((total_next_obs - obs_rms.mean) / np.sqrt(obs_rms.var)).clip(-5, 5),
                           total_policy)
 
-        if global_step % (num_worker * num_step * 50) == 0:
+        if global_step % (10) == 0:
             print('Now Global Step :{}'.format(global_step))
             torch.save(agent.model.state_dict(), model_path)
             torch.save(agent.rnd.predictor.state_dict(), predictor_path)

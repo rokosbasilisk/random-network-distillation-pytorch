@@ -1,0 +1,7641 @@
+{'OPTIONS': {'envtype': '[atari]', 'trainmethod': 'RND', 'envid': 'NetHackChallenge-v0', 'maxstepperepisode': '10000', 'extcoef': '2.', 'learningrate': '1e-4', 'numenv': '16', 'numstep': '16', 'gamma': '0.999', 'intgamma': '0.99', 'lambda': '0.95', 'stableeps': '1e-8', 'statestacksize': '4', 'preprocheight': '370', 'proprocwidth': '790', 'usegae': 'False', 'usegpu': 'True', 'usenorm': 'False', 'usenoisynet': 'False', 'clipgradnorm': '0.5', 'entropy': '0.001', 'epoch': '4', 'minibatch': '4', 'ppoeps': '0.1', 'intcoef': '1.', 'stickyaction': 'True', 'actionprob': '0.25', 'updateproportion': '0.25', 'lifedone': 'False', 'obsnormstep': '50'}}
+input and output sizes are 4 16
+/home/muops/anaconda3/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py:30: UserWarning: 
+    There is an imbalance between your GPUs. You may want to exclude GPU 1 which
+    has less than 75% of the memory or cores of GPU 0. You can do so by setting
+    the device_ids argument to DataParallel, or by setting the CUDA_VISIBLE_DEVICES
+    environment variable.
+  warnings.warn(imbalance_warn.format(device_ids[min_pos], device_ids[max_pos]))
+{'OPTIONS': {'envtype': '[atari]', 'trainmethod': 'RND', 'envid': 'NetHackChallenge-v0', 'maxstepperepisode': '10000', 'extcoef': '2.', 'learningrate': '1e-4', 'numenv': '16', 'numstep': '16', 'gamma': '0.999', 'intgamma': '0.99', 'lambda': '0.95', 'stableeps': '1e-8', 'statestacksize': '4', 'preprocheight': '370', 'proprocwidth': '790', 'usegae': 'False', 'usegpu': 'True', 'usenorm': 'False', 'usenoisynet': 'False', 'clipgradnorm': '0.5', 'entropy': '0.001', 'epoch': '4', 'minibatch': '4', 'ppoeps': '0.1', 'intcoef': '1.', 'stickyaction': 'True', 'actionprob': '0.25', 'updateproportion': '0.25', 'lifedone': 'False', 'obsnormstep': '50'}}
+input and output sizes are 4 16
+/home/muops/anaconda3/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py:30: UserWarning: 
+    There is an imbalance between your GPUs. You may want to exclude GPU 1 which
+    has less than 75% of the memory or cores of GPU 0. You can do so by setting
+    the device_ids argument to DataParallel, or by setting the CUDA_VISIBLE_DEVICES
+    environment variable.
+  warnings.warn(imbalance_warn.format(device_ids[min_pos], device_ids[max_pos]))
+Start to initailize observation normalization parameter.....
+End to initalize...
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :2560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :5120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :7680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :10240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :12800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :15360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :17920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :20480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :23040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :25600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :28160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :30720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :33280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :35840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :38400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :40960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :43520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :46080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :48640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :51200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :53760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :56320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :58880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :61440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :64000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :66560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :69120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :71680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :74240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :76800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :79360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :81920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :84480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :87040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :89600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :92160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :94720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :97280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :99840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :102400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :104960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :107520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :110080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :112640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :115200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :117760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :120320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :122880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :125440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :128000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :130560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :133120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :135680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :138240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :140800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :143360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :145920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :148480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :151040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :153600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :156160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :158720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :161280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :163840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :166400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :168960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :171520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :174080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :176640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :179200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :181760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :184320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :186880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :189440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :192000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :194560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :197120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :199680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :202240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :204800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :207360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :209920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :212480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :215040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :217600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :220160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :222720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :225280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :227840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :230400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :232960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :235520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :238080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :240640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :243200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :245760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :248320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :250880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :253440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :256000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :258560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :261120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :263680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :266240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :268800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :271360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :273920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :276480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :279040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :281600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :284160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :286720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :289280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :291840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :294400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :296960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :299520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :302080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :304640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :307200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :309760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :312320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :314880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :317440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :320000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :322560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :325120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :327680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :330240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :332800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :335360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :337920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :340480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :343040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :345600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :348160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :350720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :353280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :355840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :358400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :360960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :363520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :366080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :368640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :371200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :373760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :376320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :378880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :381440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :384000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :386560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :389120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :391680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :394240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :396800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :399360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :401920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :404480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :407040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :409600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :412160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :414720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :417280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :419840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :422400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :424960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :427520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :430080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :432640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :435200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :437760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :440320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :442880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :445440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :448000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :450560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :453120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :455680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :458240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :460800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :463360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :465920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :468480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :471040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :473600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :476160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :478720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :481280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :483840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :486400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :488960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :491520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :494080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :496640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :499200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :501760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :504320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :506880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :509440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :512000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :514560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :517120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :519680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :522240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :524800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :527360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :529920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :532480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :535040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :537600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :540160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :542720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :545280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :547840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :550400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :552960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :555520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :558080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :560640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :563200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :565760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :568320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :570880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :573440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :576000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :578560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :581120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :583680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :586240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :588800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :591360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :593920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :596480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :599040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :601600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :604160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :606720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :609280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :611840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :614400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :616960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :619520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :622080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :624640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :627200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :629760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :632320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :634880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :637440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :640000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :642560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :645120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :647680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :650240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :652800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :655360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :657920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :660480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :663040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :665600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :668160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :670720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :673280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :675840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :678400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :680960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :683520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :686080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :688640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :691200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :693760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :696320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :698880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :701440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :704000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :706560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :709120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :711680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :714240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :716800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :719360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :721920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :724480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :727040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :729600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :732160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :734720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :737280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :739840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :742400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :744960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :747520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :750080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :752640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :755200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :757760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :760320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :762880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :765440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :768000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :770560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :773120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :775680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :778240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :780800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :783360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :785920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :788480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :791040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :793600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :796160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :798720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :801280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :803840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :806400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :808960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :811520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :814080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :816640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :819200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :821760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :824320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :826880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :829440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :832000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :834560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :837120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :839680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :842240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :844800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :847360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :849920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :852480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :855040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :857600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :860160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :862720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :865280
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :867840
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :870400
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :872960
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :875520
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :878080
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :880640
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :883200
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :885760
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :888320
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :890880
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :893440
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :896000
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :898560
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :901120
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :903680
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :906240
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :908800
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :911360
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :913920
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :916480
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :919040
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :921600
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :924160
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :926720
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+second time
+making intrinsic reward
+Now Global Step :929280

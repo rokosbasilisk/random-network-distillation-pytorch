@@ -319,5 +319,4 @@ class RNDModel(nn.Module):
     def forward(self, next_obs):
         target_feature = self.target(next_obs)
         predict_feature = self.predictor(next_obs)
-        print(str(target_feature.shape)+("target feature shape"))
         return predict_feature, target_feature
