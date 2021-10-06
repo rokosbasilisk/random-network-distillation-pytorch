@@ -7638,4 +7638,11 @@ second time
 making intrinsic reward
 second time
 making intrinsic reward
-Now Global Step :929280
+Now Global Step :929280{'OPTIONS': {'envtype': '[atari]', 'trainmethod': 'RND', 'envid': 'NetHackChallenge-v0', 'maxstepperepisode': '1000', 'extcoef': '2.', 'learningrate': '1e-4', 'numenv': '16', 'numstep': '16', 'gamma': '0.999', 'intgamma': '0.99', 'lambda': '0.95', 'stableeps': '1e-8', 'statestacksize': '4', 'preprocheight': '370', 'proprocwidth': '790', 'usegae': 'False', 'usegpu': 'True', 'usenorm': 'False', 'usenoisynet': 'False', 'clipgradnorm': '0.5', 'entropy': '0.001', 'epoch': '4', 'minibatch': '4', 'ppoeps': '0.1', 'intcoef': '1.', 'stickyaction': 'True', 'actionprob': '0.25', 'updateproportion': '0.25', 'lifedone': 'False', 'obsnormstep': '50'}}
+input and output sizes are 4 113
+/home/muops/anaconda3/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py:30: UserWarning: 
+    There is an imbalance between your GPUs. You may want to exclude GPU 1 which
+    has less than 75% of the memory or cores of GPU 0. You can do so by setting
+    the device_ids argument to DataParallel, or by setting the CUDA_VISIBLE_DEVICES
+    environment variable.
+  warnings.warn(imbalance_warn.format(device_ids[min_pos], device_ids[max_pos]))

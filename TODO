@@ -1,0 +1,17 @@
+fix random network distillation
+
+download and extract all the tty files into image-frames 
+
+## Case 1:
+
+train action predictor with random-network distillation
+
+use the action-predictor's predictions to learn for decision transformer
+
+## Case 2:
+
+learn a value function using interesting states in gameplays 
+
+use the value function as intrinsic reward for RND
+
+(add be-bold mechanism(?))
