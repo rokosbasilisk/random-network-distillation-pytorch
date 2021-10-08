@@ -11,6 +11,7 @@ import nle
 import re
 import random
 from PIL import Image, ImageDraw
+from skimage.transform import resize
 
 import gym_super_mario_bros
 from nes_py.wrappers import JoypadSpace
@@ -53,37 +54,6 @@ def unwrap(env):
         return env
 
 
-class MaxAndSkipEnv(gym.Wrapper):
-    def __init__(self, env, is_render, skip=4):
-        """Return only every `skip`-th frame"""
-        gym.Wrapper.__init__(self, env)
-        # most recent raw observations (for max pooling across time steps)
-        #self._obs_buffer = np.zeros((2,) + env.observation_space.shape, dtype=np.uint8) 
-        # store dictionaries in observation buffer 
-        self._obs_buffer = np.array([{},{},{},{}])
-        self._skip = skip
-        self.is_render = is_render
-
-    def step(self, action):
-        """Repeat action, sum reward, and max over last observations."""
-        total_reward = 0.0
-        done = None
-        for i in range(self._skip):
-            obs, reward, done, info = self.env.step(action)
-            if self.is_render:
-                self.env.render()
-            self._obs_buffer[i] = obs
-            total_reward += reward
-            if done:
-                break
-
-        # Note that the observation on the done=True frame
-        # doesn't matter
-        max_frame = self._obs_buffer[random.randint(0,3)]
-        return max_frame, total_reward, done, info
-
-    def reset(self, **kwargs):
-        return self.env.reset(**kwargs)
 
 
 class AtariEnvironment(Environment):
@@ -93,7 +63,6 @@ class AtariEnvironment(Environment):
             is_render,
             env_idx,
             child_conn,
-            history_size=4,
             h=790,
             w=370,
             life_done=True,
@@ -101,7 +70,7 @@ class AtariEnvironment(Environment):
             p=0.25):
         super(AtariEnvironment, self).__init__()
         self.daemon = True
-        self.env = MaxAndSkipEnv(gym.make(env_id), is_render)
+        self.env = gym.make(env_id)
         self.env_id = env_id
         self.is_render = is_render
         self.env_idx = env_idx
@@ -115,8 +84,6 @@ class AtariEnvironment(Environment):
         self.last_action = 0
         self.p = p
 
-        self.history_size = history_size
-        self.history = np.zeros([history_size, h, w])
         self.h = h
         self.w = w
 
@@ -141,8 +108,6 @@ class AtariEnvironment(Environment):
             log_reward = reward
             force_done = done
 
-            self.history[:3, :, :] = self.history[1:, :, :]
-            self.history[3, :, :] = self.pre_proc(s)
 
             self.rall += reward
             self.steps += 1
@@ -152,8 +117,8 @@ class AtariEnvironment(Environment):
                 print("[Episode {}({})] Step: {}  Reward: {}  Recent Reward: {}  Visited Room: [{}]".format(
                     self.episode, self.env_idx, self.steps, self.rall, np.mean(self.recent_rlist),
                     info.get('episode', {}).get('visited_rooms', {})))
-                self.history = self.reset()
-            self.child_conn.send([self.history[:, :, :], reward, force_done, done, log_reward])
+                self.reset()
+            self.child_conn.send([self.pre_proc(s), reward, force_done, done, log_reward])
 
     def reset(self):
         self.last_action = 0
@@ -161,8 +126,7 @@ class AtariEnvironment(Environment):
         self.episode += 1
         self.rall = 0
         s = self.env.reset()
-        self.get_init_state(s)
-        return self.history[:, :, :]
+        return s
 
     def pre_proc(self, frame):
         if type(frame) == type(dict()):
@@ -178,8 +142,7 @@ class AtariEnvironment(Environment):
         img = Image.new(mode='RGB',size=(790,370))
         text = ImageDraw.Draw(img)
         text.text((0, 0),frame, fill=(255,255,255))
-        return np.array(img.convert('L')).reshape(1,790,370)
+        img = np.array(img.convert('L'))
+        img = resize(img,(768,384)).reshape(1,768,384)
+        return img 
 
-    def get_init_state(self, s):
-        for i in range(self.history_size):
-            self.history[i,:,:] = self.pre_proc(s)

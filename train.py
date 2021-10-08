@@ -1,4 +1,5 @@
-from agents import *
+#from agents import *
+from agents_vit import *
 from envs import *
 from utils import *
 from config import *
@@ -16,11 +17,6 @@ def main():
     env_type = default_config['EnvType']
 
     env = gym.make(env_id)
-    #input_size = env.observation_space.shape  # 4
-    input_size = 4
-    output_size = env.action_space.n  # 113
-    print("input and output sizes are %s %s"%(input_size,output_size))
-
     env.close()
 
     is_load_model = False
@@ -57,7 +53,7 @@ def main():
     life_done = default_config.getboolean('LifeDone')
 
     reward_rms = RunningMeanStd()
-    obs_rms = RunningMeanStd(shape=(1, 1,790,370))
+    obs_rms = RunningMeanStd(shape=(1, 1,768,384))
     pre_obs_norm_step = int(default_config['ObsNormStep'])
     discounted_reward = RewardForwardFilter(int_gamma)
 
@@ -67,8 +63,6 @@ def main():
         env_type = AtariEnvironment
 
     agent = agent(
-        input_size,
-        output_size,
         num_worker,
         num_step,
         gamma,
@@ -101,13 +95,13 @@ def main():
     child_conns = []
     for idx in range(num_worker):
         parent_conn, child_conn = Pipe()
-        work = env_type(env_id, is_render, idx, child_conn, history_size = 4,sticky_action=sticky_action, p=action_prob,life_done=life_done)
+        work = env_type(env_id, is_render, idx, child_conn,sticky_action=sticky_action, p=action_prob,life_done=life_done)
         work.start()
         works.append(work)
         parent_conns.append(parent_conn)
         child_conns.append(child_conn)
 
-    states = np.zeros([num_worker, 4, 790, 370])
+    states = np.zeros([num_worker, 1, 768, 384])
 
     sample_episode = 0
     sample_rall = 0
@@ -121,14 +115,14 @@ def main():
     print('Start to initailize observation normalization parameter.....')
     next_obs = []
     for step in range(num_step * pre_obs_norm_step):
-        actions = np.random.randint(0, output_size, size=(num_worker,))
+        actions = np.random.randint(0, 113, size=(num_worker,))
 
         for parent_conn, action in zip(parent_conns, actions):
             parent_conn.send(action)
 
         for parent_conn in parent_conns:
             s, r, d, rd, lr = parent_conn.recv()
-            next_obs.append(s[3,:,:].reshape([1,790,370]))
+            next_obs.append(s.reshape([1,768,384]))
 
         if len(next_obs) % (num_step * num_worker) == 0:
             next_obs = np.stack(next_obs)
@@ -144,7 +138,7 @@ def main():
 
         # Step 1. n-step rollout
         for _ in range(num_step):
-            actions, value_ext, value_int, policy = agent.get_action(np.float32(states) / 255.)
+            actions, value_ext, value_int, policy = agent.get_action(np.float32(states))
 
             for parent_conn, action in zip(parent_conns, actions):
                 parent_conn.send(action)
@@ -157,7 +151,7 @@ def main():
                 dones.append(d)
                 real_dones.append(rd)
                 log_rewards.append(lr)
-                next_obs.append(s[3,:,:].reshape([1,790,370]))
+                next_obs.append(s.reshape([1,768,384]))
 
             next_states = np.stack(next_states)
             rewards = np.hstack(rewards)
@@ -196,17 +190,16 @@ def main():
                 sample_i_rall = 0
 
         # calculate last next value
-        print(states)
-        _, value_ext, value_int, _ = agent.get_action(np.float32(states) / 255.)
+        _, value_ext, value_int, _ = agent.get_action(np.float32(states))
         total_ext_values.append(value_ext)
         total_int_values.append(value_int)
         # --------------------------------------------------
 
-        total_state = np.stack(total_state).transpose([1, 0, 2, 3, 4]).reshape([-1, 4, 790,370])
+        total_state = np.stack(total_state).transpose([1, 0, 2, 3, 4]).reshape([-1, 1, 768,384])
         total_reward = np.stack(total_reward).transpose().clip(-1, 1)
         total_action = np.stack(total_action).transpose().reshape([-1])
         total_done = np.stack(total_done).transpose()
-        total_next_obs = np.stack(total_next_obs).transpose([1, 0, 2, 3, 4]).reshape([-1, 1, 790,370])
+        total_next_obs = np.stack(total_next_obs).transpose([1, 0, 2, 3, 4]).reshape([-1, 1, 768,384])
         total_ext_values = np.stack(total_ext_values).transpose()
         total_int_values = np.stack(total_int_values).transpose()
         total_logging_policy = np.vstack(total_policy_np)
@@ -254,11 +247,9 @@ def main():
         # -----------------------------------------------
 
         # Step 5. Training!
-        agent.train_model(np.float32(total_state) / 255., ext_target, int_target, total_action,
-                          total_adv, ((total_next_obs - obs_rms.mean) / np.sqrt(obs_rms.var)).clip(-5, 5),
-                          total_policy)
+        agent.train_model(np.float32(total_state), ext_target, int_target, total_action,total_adv, ((total_next_obs - obs_rms.mean) / np.sqrt(obs_rms.var)).clip(-5, 5),total_policy)
 
-        if global_step % (10) == 0:
+        if global_step % (500) == 0:
             print('Now Global Step :{}'.format(global_step))
             torch.save(agent.model.state_dict(), model_path)
             torch.save(agent.rnd.predictor.state_dict(), predictor_path)

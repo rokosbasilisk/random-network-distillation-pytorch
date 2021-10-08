@@ -7,7 +7,7 @@ import torch.optim as optim
 
 from torch.distributions.categorical import Categorical
 
-from model import CnnActorCriticNetwork, RNDModel
+from model_vit import ActorCriticViT, RNDModelViT
 from utils import global_grad_norm_
 
 
@@ -28,7 +28,7 @@ class RNDAgent(object):
             use_gae=True,
             use_cuda=False,
             use_noisy_net=False):
-        self.model = nn.DataParallel(CnnActorCriticNetwork(use_noisy_net))
+        self.model = nn.DataParallel(ActorCriticViT())
         self.num_env = num_env
         self.num_step = num_step
         self.gamma = gamma
@@ -42,7 +42,7 @@ class RNDAgent(object):
         self.update_proportion = update_proportion
         self.device = torch.device("cuda" if use_cuda else 'cpu')
 
-        self.rnd = RNDModel()
+        self.rnd = RNDModelViT()
         self.optimizer = optim.Adam(list(self.model.parameters()) + list(self.rnd.predictor.parameters()),
                                     lr=learning_rate)
         self.rnd = self.rnd.to(self.device)

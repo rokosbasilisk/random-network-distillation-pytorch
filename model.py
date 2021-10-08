@@ -72,7 +72,7 @@ class Flatten(nn.Module):
 
 
 class CnnActorCriticNetwork(nn.Module):
-    def __init__(self, input_size, output_size, use_noisy_net=False):
+    def __init__(self,use_noisy_net=False):
         super(CnnActorCriticNetwork, self).__init__()
 
         if use_noisy_net:
@@ -83,7 +83,7 @@ class CnnActorCriticNetwork(nn.Module):
 
         self.feature = nn.Sequential(
             nn.Conv2d(
-                in_channels=4,
+                in_channels=1,
                 out_channels=32,
                 kernel_size=8,
                 stride=4),
@@ -115,14 +115,14 @@ class CnnActorCriticNetwork(nn.Module):
                 stride=1),
             Flatten(),
             nn.ReLU(),
-            linear(5760,256),
+            linear(5440,256),
             nn.ReLU()
         )
 
         self.actor = nn.Sequential(
             linear(256, 256),
             nn.ReLU(),
-            linear(256, output_size)
+            linear(256, 113)
         )
 
         self.extra_layer = nn.Sequential(
@@ -167,12 +167,12 @@ class CnnActorCriticNetwork(nn.Module):
 
 
 class RNDModel(nn.Module):
-    def __init__(self, input_size, output_size):
+    def __init__(self):
         super(RNDModel, self).__init__()
 
         self.predictor =nn.Sequential(
             nn.Conv2d(
-                in_channels=4,
+                in_channels=1,
                 out_channels=32,
                 kernel_size=8,
                 stride=4),
@@ -204,11 +204,11 @@ class RNDModel(nn.Module):
                 stride=1),
             Flatten(),
             nn.ReLU(),
-            nn.Linear(5760,256)
+            nn.Linear(5440,256)
         )
         self.target = nn.Sequential(
             nn.Conv2d(
-                in_channels=4,
+                in_channels=1,
                 out_channels=32,
                 kernel_size=8,
                 stride=4),
@@ -240,7 +240,7 @@ class RNDModel(nn.Module):
                 stride=1),
             Flatten(),
             nn.ReLU(),
-            nn.Linear(5760,256)
+            nn.Linear(5440,256)
         )
         for p in self.modules():
             if isinstance(p, nn.Conv2d):
