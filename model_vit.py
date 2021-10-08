@@ -6,7 +6,6 @@ import numpy as np
 import math
 from torch.nn import init
 
-
 class NoisyLinear(nn.Module):
     """Factorised Gaussian NoisyNet"""
 

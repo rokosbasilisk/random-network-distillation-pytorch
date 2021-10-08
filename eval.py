@@ -22,7 +22,7 @@ def main():
     else:
         raise NotImplementedError
     input_size = env.observation_space.shape  # 4
-    output_size = env.action_space.n  # 2
+    output_size = env.action_space.n  # 113
 
     if 'Breakout' in env_id:
         output_size -= 1
@@ -34,7 +34,7 @@ def main():
     predictor_path = 'models/{}.pred'.format(env_id)
     target_path = 'models/{}.target'.format(env_id)
 
-    use_cuda = False
+    use_cuda = True
     use_gae = default_config.getboolean('UseGAE')
     use_noisy_net = default_config.getboolean('UseNoisyNet')
 
@@ -60,10 +60,6 @@ def main():
 
     if default_config['EnvType'] == 'atari':
         env_type = AtariEnvironment
-    elif default_config['EnvType'] == 'mario':
-        env_type = MarioEnvironment
-    else:
-        raise NotImplementedError
 
     agent = agent(
         input_size,
@@ -106,7 +102,7 @@ def main():
         parent_conns.append(parent_conn)
         child_conns.append(child_conn)
 
-    states = np.zeros([num_worker, 4, 84, 84])
+    states = np.zeros([num_worker, 4, 790, 370])
 
     steps = 0
     rall = 0
@@ -123,8 +119,8 @@ def main():
         for parent_conn in parent_conns:
             s, r, d, rd, lr = parent_conn.recv()
             rall += r
-            next_states = s.reshape([1, 4, 84, 84])
-            next_obs = s[3, :, :].reshape([1, 1, 84, 84])
+            next_states = s.reshape([1, 4, 790, 370])
+            next_obs = s[3, :, :].reshape([1, 1, 790, 370])
 
         # total reward = int reward + ext Reward
         intrinsic_reward = agent.compute_intrinsic_reward(next_obs)

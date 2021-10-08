@@ -18,7 +18,7 @@ def main():
     env = gym.make(env_id)
     #input_size = env.observation_space.shape  # 4
     input_size = 4
-    output_size = env.action_space.n  # 2
+    output_size = env.action_space.n  # 113
     print("input and output sizes are %s %s"%(input_size,output_size))
 
     env.close()
@@ -196,6 +196,7 @@ def main():
                 sample_i_rall = 0
 
         # calculate last next value
+        print(states)
         _, value_ext, value_int, _ = agent.get_action(np.float32(states) / 255.)
         total_ext_values.append(value_ext)
         total_int_values.append(value_int)

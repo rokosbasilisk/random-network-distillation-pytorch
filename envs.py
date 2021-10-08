@@ -182,6 +182,4 @@ class AtariEnvironment(Environment):
 
     def get_init_state(self, s):
         for i in range(self.history_size):
-            #print(self.history.shape)
-            #print(self.pre_proc(s).shape)
             self.history[i,:,:] = self.pre_proc(s)
