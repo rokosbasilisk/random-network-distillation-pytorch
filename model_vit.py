@@ -78,50 +78,17 @@ class RNDModelViT(nn.Module):
                 dropout = 0.1,
                 emb_dropout = 0.1)
 
-        self.target = nn.Sequential(
-            nn.Conv2d(
-                in_channels=1,
-                out_channels=32,
-                kernel_size=8,
-                stride=4),
-            nn.ReLU(),
-            nn.Conv2d(
-                in_channels=32,
-                out_channels=64,
-                kernel_size=4,
-                stride=2),
-            nn.MaxPool2d(2,2),
-            nn.ReLU(),
-            nn.Conv2d(
-                in_channels=64,
-                out_channels=64,
-                kernel_size=4,
-                stride=1),
-            nn.ReLU(),
-            nn.Conv2d(
-                in_channels=64,
-                out_channels=64,
-                kernel_size=4,
-                stride=1),
-            nn.MaxPool2d(2,2),
-            nn.ReLU(),
-            nn.Conv2d(
-                in_channels=64,
-                out_channels=64,
-                kernel_size=4,
-                stride=1),
-            Flatten(),
-            nn.ReLU(),
-            nn.Linear(5440,256)
-        )
-        for p in self.target.modules():
-            if isinstance(p, nn.Conv2d):
-                init.orthogonal_(p.weight, np.sqrt(2))
-                p.bias.data.zero_()
-
-            if isinstance(p, nn.Linear):
-                init.orthogonal_(p.weight, np.sqrt(2))
-                p.bias.data.zero_()
+        self.target =  ViT(
+                image_size = 768,
+                patch_size = 24,
+                channels = 1,
+                num_classes = 256,
+                dim = 1024,
+                depth = 5,
+                heads = 16,
+                mlp_dim = 1024,
+                dropout = 0.1,
+                emb_dropout = 0.1)
 
         for param in self.target.parameters():
             param.requires_grad = False
