@@ -23,16 +23,14 @@ class ActorCriticViT(nn.Module):
                 patch_size = 24,
                 channels = 1,
                 num_classes = 256,
-                dim = 1024,
-                depth = 5,
-                heads = 16,
-                mlp_dim = 1024,
-                dropout = 0.1,
-                emb_dropout = 0.1)
+                dim = 128,
+                depth = 4,
+                heads = 8,
+                mlp_dim = 128,
+                dropout = 0.2,
+                emb_dropout = 0.2)
 
         self.actor = nn.Sequential(
-            nn.Linear(256, 256),
-            nn.ReLU(),
             nn.Linear(256, 113)
         )
 
@@ -71,24 +69,24 @@ class RNDModelViT(nn.Module):
                 patch_size = 24,
                 channels = 1,
                 num_classes = 256,
-                dim = 1024,
-                depth = 5,
-                heads = 16,
-                mlp_dim = 1024,
-                dropout = 0.1,
-                emb_dropout = 0.1)
+                dim = 128,
+                depth = 4,
+                heads = 8,
+                mlp_dim = 128,
+                dropout = 0.2,
+                emb_dropout = 0.2)
 
         self.target =  ViT(
                 image_size = 768,
                 patch_size = 24,
                 channels = 1,
                 num_classes = 256,
-                dim = 1024,
-                depth = 5,
-                heads = 16,
-                mlp_dim = 1024,
-                dropout = 0.1,
-                emb_dropout = 0.1)
+                dim = 128,
+                depth = 4,
+                heads = 8,
+                mlp_dim = 128,
+                dropout = 0.2,
+                emb_dropout = 0.2)
 
         for param in self.target.parameters():
             param.requires_grad = False

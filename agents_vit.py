@@ -43,10 +43,12 @@ class RNDAgent(object):
         self.device = torch.device("cuda" if use_cuda else 'cpu')
 
         self.rnd = RNDModelViT()
-        self.optimizer = optim.Adam(list(self.model.parameters()) + list(self.rnd.predictor.parameters()),
+        self.rnd_predictor = nn.DataParallel(self.rnd.predictor)
+        self.rnd_target = self.rnd.target
+        self.optimizer = optim.Adam(list(self.model.parameters()) + list(self.rnd_predictor.parameters()),
                                     lr=learning_rate)
-        self.rnd = self.rnd.to(self.device)
-
+        self.rnd_predictor = self.rnd_predictor.to(self.device)
+        self.rnd_terget = self.rnd_target.to(self.device)
         self.model = self.model.to(self.device)
 
     def get_action(self, state):
@@ -66,8 +68,8 @@ class RNDAgent(object):
 
     def compute_intrinsic_reward(self, next_obs):
         next_obs = torch.FloatTensor(next_obs).to(self.device)
-        target_next_feature = self.rnd.target(next_obs)
-        predict_next_feature = self.rnd.predictor(next_obs)
+        target_next_feature = self.rnd_target(next_obs)
+        predict_next_feature = self.rnd_predictor(next_obs)
         intrinsic_reward = (target_next_feature - predict_next_feature).pow(2).sum(1) / 2
         return intrinsic_reward.data.cpu().numpy()
 
@@ -128,5 +130,5 @@ class RNDAgent(object):
                 self.optimizer.zero_grad()
                 loss = actor_loss + 0.5 * critic_loss - self.ent_coef * entropy + forward_loss
                 loss.backward()
-                global_grad_norm_(list(self.model.parameters())+list(self.rnd.predictor.parameters()))
+                global_grad_norm_(list(self.model.parameters())+list(self.rnd_predictor.parameters()))
                 self.optimizer.step()

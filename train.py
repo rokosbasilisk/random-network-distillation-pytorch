@@ -249,7 +249,7 @@ def main():
         # Step 5. Training!
         agent.train_model(np.float32(total_state), ext_target, int_target, total_action,total_adv, ((total_next_obs - obs_rms.mean) / np.sqrt(obs_rms.var)).clip(-5, 5),total_policy)
 
-        if global_step % (500) == 0:
+        if global_step % (100) == 0:
             print('Now Global Step :{}'.format(global_step))
             torch.save(agent.model.state_dict(), model_path)
             torch.save(agent.rnd.predictor.state_dict(), predictor_path)
