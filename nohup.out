@@ -1,0 +1,32 @@
+{'OPTIONS': {'envtype': '[atari]', 'trainmethod': 'RND', 'envid': 'NetHackChallenge-v0', 'maxstepperepisode': '10000', 'extcoef': '5', 'learningrate': '1e-3', 'numenv': '1', 'numstep': '128', 'gamma': '0.999', 'intgamma': '0.999', 'lambda': '0.95', 'stableeps': '1e-8', 'statestacksize': '4', 'preprocheight': '370', 'proprocwidth': '790', 'usegae': 'False', 'usegpu': 'True', 'usenorm': 'False', 'usenoisynet': 'False', 'clipgradnorm': '0.5', 'entropy': '0.01', 'epoch': '15', 'minibatch': '4', 'ppoeps': '0.001', 'intcoef': '1', 'stickyaction': 'False', 'actionprob': '0.02', 'updateproportion': '0.5', 'lifedone': 'False', 'obsnormstep': '512'}}
+/home/muops/anaconda3/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py:30: UserWarning: 
+    There is an imbalance between your GPUs. You may want to exclude GPU 1 which
+    has less than 75% of the memory or cores of GPU 0. You can do so by setting
+    the device_ids argument to DataParallel, or by setting the CUDA_VISIBLE_DEVICES
+    environment variable.
+  warnings.warn(imbalance_warn.format(device_ids[min_pos], device_ids[max_pos]))
+load model...
+load finished!
+Start to initailize observation normalization parameter.....
+[Episode 1(0)] Step: 10002  Reward: 0.0  Recent Reward: 0.0  Visited Room: [{}]
+[Episode 2(0)] Step: 10002  Reward: 0.0  Recent Reward: 0.0  Visited Room: [{}]
+[Episode 3(0)] Step: 6946  Reward: 0.0  Recent Reward: 0.0  Visited Room: [{}]
+[Episode 4(0)] Step: 4288  Reward: 0.0  Recent Reward: 0.0  Visited Room: [{}]
+[Episode 5(0)] Step: 1708  Reward: 4.0  Recent Reward: 0.8  Visited Room: [{}]
+[Episode 6(0)] Step: 212  Reward: 0.0  Recent Reward: 0.6666666666666666  Visited Room: [{}]
+[Episode 7(0)] Step: 3555  Reward: 5.0  Recent Reward: 1.2857142857142858  Visited Room: [{}]
+[Episode 8(0)] Step: 1705  Reward: 0.0  Recent Reward: 1.125  Visited Room: [{}]
+[Episode 9(0)] Step: 3522  Reward: 0.0  Recent Reward: 1.0  Visited Room: [{}]
+[Episode 10(0)] Step: 1369  Reward: 0.0  Recent Reward: 0.9  Visited Room: [{}]
+[Episode 11(0)] Step: 6762  Reward: 0.0  Recent Reward: 0.8181818181818182  Visited Room: [{}]
+[Episode 12(0)] Step: 10002  Reward: 0.0  Recent Reward: 0.75  Visited Room: [{}]
+[Episode 13(0)] Step: 3911  Reward: 0.0  Recent Reward: 0.6923076923076923  Visited Room: [{}]
+End to initalize...
+Traceback (most recent call last):
+  File "train.py", line 261, in <module>
+    main()
+  File "train.py", line 225, in main
+    ext_target, ext_adv = make_train_data(total_reward,
+  File "/home/muops/datasets/nethack/rnd/utils.py", line 32, in make_train_data
+    running_add = value[:, -1]
+IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed

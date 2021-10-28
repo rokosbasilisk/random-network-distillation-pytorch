@@ -19,7 +19,7 @@ def main():
     env = gym.make(env_id)
     env.close()
 
-    is_load_model = False
+    is_load_model = True
     is_render = False
     model_path = 'models/{}.model'.format(env_id)
     predictor_path = 'models/{}.pred'.format(env_id)
@@ -252,6 +252,7 @@ def main():
         if global_step % (100) == 0:
             print('Now Global Step :{}'.format(global_step))
             torch.save(agent.model.state_dict(), model_path)
+            torch.save(total_action,'saved_games/'+str(global_step)+str(sample_env_idx)+'.actions')
             torch.save(agent.rnd.predictor.state_dict(), predictor_path)
             torch.save(agent.rnd.target.state_dict(), target_path)
 

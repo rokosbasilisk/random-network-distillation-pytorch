@@ -19,13 +19,12 @@ from gym_super_mario_bros.actions import SIMPLE_MOVEMENT, COMPLEX_MOVEMENT
 
 from torch.multiprocessing import Pipe, Process
 
-from model import *
+from model_vit import *
 from config import *
 from PIL import Image
 
 train_method = default_config['TrainMethod']
 max_step_per_episode = int(default_config['MaxStepPerEpisode'])
-
 
 class Environment(Process):
     @abstractmethod
@@ -43,6 +42,7 @@ class Environment(Process):
     @abstractmethod
     def get_init_state(self, x):
         pass
+
 def unwrap(env):
     if hasattr(env, "unwrapped"):
         return env.unwrapped
@@ -52,9 +52,6 @@ def unwrap(env):
         return unwrap(env.leg_env)
     else:
         return env
-
-
-
 
 class AtariEnvironment(Environment):
     def __init__(
@@ -70,7 +67,7 @@ class AtariEnvironment(Environment):
             p=0.25):
         super(AtariEnvironment, self).__init__()
         self.daemon = True
-        self.env = gym.make(env_id)
+        self.env = gym.make(env_id,savedir='saved_games/')
         self.env_id = env_id
         self.is_render = is_render
         self.env_idx = env_idx
